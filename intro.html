@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Sri Lankan Wildlife</title>
+    <link rel="stylesheet" href="css/intro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Mulish:wght@200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+        integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="logo">
+            <a href="index.html"><img src="logo.png"></a>
+        </nav>
+        <nav class="navigation">
+            <input type="checkbox" class="toggle-menu">
+            <nav class="hamburger"></nav>
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./intro.html">Introduction</a></li>
+                <li><a href="./dept.html">Department of Wildlife Conservation</a></li>
+                <li><a href="./leopard.html">Leopard</a></li>
+                <li><a href="./animals.html">Indigenous Animals</a></li>
+                <li><a href="./elephant.html">Wild Elephant</a></li>
+                <li><a href="./signin.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- pop up button  -->
+    <button onclick="showLoginDialog()" style="display: none;" id="editButton" class="popup">Edit-Content</button>
+
+    <!-- end of pop up  -->
+        <script>
+            // Check if the value is set in localStorage
+            const changeStyle = localStorage.getItem('changeStyle');
+    
+            if (changeStyle === 'true') {
+                // Change the style of the element
+                document.getElementById('editButton').style.display = 'block';
+    
+                // Clear the value from localStorage so it doesn't trigger again
+                localStorage.removeItem('changeStyle');
+            }
+        </script>
+    
+        <!-- Pop up dialog -->
+    
+        <div class="form-container">
+            <dialog id="login-dialog" style="max-height: 400px; overflow-y: auto;">
+                <h2>Srilanka : A Haven For WildLife</h2>
+                <p>You can edit the page content below.<br></p>
+                <button type="button" class="close" id="btnClose"><i class="ri-close-fill"></i></button>
+                <textarea id="editedContent" rows="4" cols="50"></textarea>
+                <button type="button" id="btnSave">Save Changes</button>
+            </dialog>
+        </div>
+
+        <!-- end of pop up -->
+        <!-- editable contetn start -->
+        <div id="editableContent">
+ <section x-data="texts">
+        <section class="text-box">
+            <h1 x-text="h1"></h1>
+            <p style="text-align: center;" x-text="pmain"></p>
+        </section>
+
+
+        <section class="container">
+            <section class="card">
+                <section class="sub-col">
+                    <h1 x-text="h1udaw"></h1>
+                    <a href="#">
+                        <img src="i6.jpg"></a>
+
+                    <hr>
+                    <p style="text-align: center;" x-text="pudaw"><br>
+                    <h2 x-text="locudaw"></h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.3707620136597!2d80.87374407364943!3d6.474634123732044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae408ff88887e79%3A0xaf12e79ffbd980d7!2sUdawalawe%20National%20Park!5e0!3m2!1sen!2slk!4v1705471736279!5m2!1sen!2slk"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </p>
+
+                </section>
+            </section>
+
+            <section class="card">
+                <section class="sub-col">
+                    <h1 x-text="h1sinhar"></h1>
+                    <a href="#">
+                        <img src="elephant.jpeg"></a>
+
+                    <hr>
+                    <p style="text-align: center;"><br>
+                    <h2 x-text="locsinhar"></h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.899115223016!2d80.45745167364899!3d6.40699612450904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3e76bd109d45f%3A0x8c0ef1010649701b!2sSinharaja%20Forest%20Reserve!5e0!3m2!1sen!2slk!4v1705472155940!5m2!1sen!2slk"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </p>
+                </section>
+            </section>
+
+            <section class="card">
+                <section class="sub-col">
+                    <h1 x-text="h1kum"></h1>
+                    <a href="#">
+                        <img src="i2.jpg"></a>
+
+                    <hr>
+                    <p style="text-align: center;"><br>
+                    <h2 x-text="lockum"></h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.5927970150337!2d81.66667827365015!3d6.572965122589334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae5c8b55f7156a3%3A0xce605bccbb80201a!2sKumana%20National%20Park!5e0!3m2!1sen!2slk!4v1705472207616!5m2!1sen!2slk"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </p>
+                </section>
+            </section>
+        </section>
+
+        <section id="summary-table">
+            <h2 x-text="table"></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Places</th>
+                        <th>District</th>
+                        <th>Area</th>
+                        <th>Known For</th>
+                        <th>Animals</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Udawalawe</td>
+                        <td>Sabaragamuwa and Uva Provinces</td>
+                        <td>308.21 SqKm</td>
+                        <td>Established as a sanctuary for wildlife displaced by the Udawalawe Reservoir; popular for
+                            elephant safaris.</td>
+                        <td>Asian elephants, buffalo, deer, and various bird species</td>
+                    </tr>
+                    <tr>
+                        <td>Sinharaja</td>
+                        <td>Southern and Southwestern Sri Lanka</td>
+                        <td>88.64 SqKm</td>
+                        <td>Last remaining rainforest in Sri Lanka, biodiversity hotspot, UNESCO Biosphere Reserve.</td>
+                        <td>Diverse range of flora and fauna, including many endemic species of birds, amphibians,
+                            reptiles, and mammals.</td>
+                    </tr>
+                    <tr>
+                        <td>Kumana</td>
+                        <td>Southeastern</td>
+                        <td>Unspecified</td>
+                        <td>Renowned for its avifauna, particularly large flocks of migratory waterfowl and wading
+                            birds.</td>
+                        <td>Diverse birdlife, elephants, leopards, and various other wildlife species.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5">This table shows a summary about the Wildlife locations mentioned above.</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <footer>
+            <section class="newsletter">
+                <h4>Subscribe to our Newsletter</h4> 
+                <section class="newsletter-signup"> 
+                    <form onsubmit="storeNewsLetter(); return false;">
+                        <input type="email" name="email" id="emailInput" placeholder="Enter your email address">
+                    <button type="submit">Subscribe</button>
+                  </form>
+                  <p id="message"></p> 
+                </section>
+            </section>
+            <section class="container">
+                <section class="row">
+                    <section class="footer-col">
+                        <h4>Contact</h4> <br>
+                        <ul>
+                            <li>+94-117112245</li> <br>
+                            <li>wildlifeinsrilanka@gmail.com</li>
+                        </ul>
+                    </section>
+                    <section class="footer-col">
+                        <h4>Quick Links</h4> <br>
+                        <ul>
+                            <li><a href="index.html">Home</a></li> <br>
+                            <li><a href="intro.html">Introduction</a></li> <br>
+                            <li><a href="dept.html">Department of Wildlife Conservation</a></li> <br>
+                            <li><a href="leopard.html">Lankan Leopard</a></li> <br>
+                            <li><a href="animals.html">Indigenous Animals</a></li> <br>
+                            <li><a href="elephant.html">Wild Elephant</a></li> <br>
+                        </ul>
+                    </section>
+                    <section class="footer-col">
+                        <h4>Social</h4> <br>
+                        <section class="social-link">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </section>
+                    </section>
+                </section>
+                <br><br><br>
+                <p>&copy; 2024 Sri Lankan Wildlife. All rights reserved.</p>
+            </section>
+            <!-- Content source: 
+                    https://www.wikipedia.org/
+                    https://chat.openai.com/
+                    https://animalia.bio/
+
+                    Img source:
+                    https://flickr.com/
+                    https://animalia.bio/
+                    https://www.pexels.com/
+                    https://unsplash.com/
+                 -->
+        </footer>
+    </section>
+
+        </div>
+   
+    <script src="./intro.js"></script>
+    <script src="./newsletter.js"></script>
+    
+</body>
+
+</html>

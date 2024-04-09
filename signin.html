@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sri Lanka: A haven for Wildlife</title>
+        <link rel="stylesheet" href="css/signin.css">
+        <link rel="stylesheet" href="css\signin.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Mulish:wght@200&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+            integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+        <link rel="manifest" href="./site.webmanifest">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="manifest" href="./manifest.json">
+        <script src="//unpkg.com/alpinejs" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h2 class="logo"><im src="./logo.png"></im></h2>
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="intro.html">Introduction</a>
+                <a href="dept.html">Department of Wildlife Conservation</a>
+                <a href="leopard.html">Leopard</a>
+                <a href="animals.html">Indigenous Animals</a>
+                <a href="./elephant.html">Wild Elephant</a>
+            </nav>
+        </header>
+        
+        <section class="signin">
+        <button class="btnLogin-popup" id="signin">Sign in</button>
+    </section>
+    
+        <section class="wrapper">
+            <section class="icon-close"><span class="icon-close-i"></span></section>
+            <section class="form-box login">
+                <h2>Login</h2>
+                <form action="#">
+                    <section class="input-box">
+                        <span class="icon-mail"></span>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                        <label>Email</label>
+                    </section>
+                    <section class="input-box">
+                        <span class="icon-password"></span>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                        <label>Password</label>
+                    </section>
+                    <section class="remember-forgot">
+                        <label>
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <a href="#">Forgot Password?</a>
+                    </section>
+                    <button type="button" onclick="loginUser()" class="btn btn-primary" id="login_btn">Login</button>
+                    <section class="login-register">
+                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                    </section>
+                </form>
+            </section>
+    
+            <section class="form-box register">
+                <h2>Registration</h2>
+                <form action="#">
+                    <section class="input-box">
+                        <span class="icon-user"></span>
+                        <input type="text" class="form-control" id="regName" name="name"  required>
+                        <label>Username</label>
+                    </section>
+                    <section class="input-box">
+                        <span class="icon-mail"></span>
+                        <input type="email" class="form-control" id="regEmail" name="email"  required>
+                        <label>Email</label>
+                    </section>
+                    <section class="input-box">
+                        <span class="icon-password"></span>
+                        <input type="password" class="form-control" id="regPassword" name="password"  required>
+                        <label>Password</label>
+                    </section>
+                    <section class="remember-forgot">
+                        <label>
+                            <input type="checkbox"> I agree to the <a href="">terms & conditions</a>
+                        </label>
+                    </section>
+                    <button type="submit" onclick="registerUser()" class="btn btn-primary" id="save_btn">Register</button>
+                    <section class="login-register">
+                        <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                    </section>
+                </form>
+            </section>
+        </section>
+    </body>
+
+
+    <!-- Content source: 
+                https://www.wikipedia.org/
+                https://chat.openai.com/
+                https://animalia.bio/
+
+                Img source:
+                https://flickr.com/
+                https://animalia.bio/
+                https://www.pexels.com/
+                https://unsplash.com/
+             -->
+    </footer>
+    <script src="./index.js"></script>
+    </section>
+    <script src="./signin.js"></script>
+    <script src="./newsletter.js"></script>
+    </body>
+
+    </html>
