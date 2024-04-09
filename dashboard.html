@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <!-- <link rel="stylesheet" href="css/mainn.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Mulish:wght@200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+        integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="./manifest.json">
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+
+<body>
+
+    <section class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="intro.html">Introduction</a></li>
+            <li><a href="dept.html">Department of Wildlife Conservation</a></li>
+            <li><a href="animals.html">Indigenous animals</a></li>
+            <li><a href="elephant.html">Wild Elephant</a></li>
+            <li><a href="leopard.html">Leopard</a></li>
+            <li><a href="yala.html">Yala</a></li>
+            <li><a href="wilpattu.html">Wilpattu</a></li>
+            <button onclick="logOut()" class="logout" style="float: right;">Logout</button>
+        </ul>
+    </section>
+
+    <section class="user" id="user-content">
+        <section class="welcome-text">
+
+            <h1>Hi Admin! <br>Hope you are having a good day. You can visit pages (and make changes to them) and view the
+                list of
+                subscribers, here. </h1>
+        </section>
+        <section class="adminPart" id="admin-content">
+
+            <div id="subscriberListContainer">
+                <div id="subscriberList">
+                    <h3>Subscribers</h3>
+                    <h2>Newsletter Emails</h2>
+                    <ul id="emailList"></ul>
+                </div>
+            </div>
+        </section>
+        <!-- The subscribers list is visible only to the authorized user. user credentials; 
+        email : admin
+        password : admin
+        role : admin 
+        Upon registering with the above credentials, you will be able to view the subscriber list.  -->
+
+        <section class="content">
+            <section class="card">
+                <section class="card-content">
+                    <h2>Home</h2>
+                    <img src="tiger.jpg">
+                    <p>Read about the significant and diversity of Sri Lankan Wildlife here.</p>
+                    <a href="index.html" class="btn">Visit Home page</a>
+                    <button onclick="changeStyleOnPageB1()">Edit Page</button>
+                    <script>
+                        function changeStyleOnPageB1() {
+                        // Set a value in localStorage
+                        localStorage.setItem('changeStyle', 'true');
+                    
+                        // Redirect to Page B
+                        window.location.href = 'index.html';
+                    }
+                    </script> 
+        
+                </section>
+            </section>
+            <section class="card">
+                <section class="card-content">
+                    <h2>Introduction</h2>
+                    <img src="ducks.jpeg">
+                    <p>Find about about important places rich in wildlife in Sri Lanka.</p>
+                    <a href="intro.html" class="btn">Visit the Introduction page.</a>
+                    <button onclick="changeStyleOnPageB2()">Edit Page</button>
+                    <script>
+                        function changeStyleOnPageB2() {
+                        // Set a value in localStorage
+                        localStorage.setItem('changeStyle', 'true');
+                    
+                        // Redirect to Page B
+                        window.location.href = 'intro.html';
+                    }
+                    </script> 
+                </section>
+            </section>
+            <section class="card">
+                <section class="card-content">
+                    <h2>Department</h2>
+                    <img src="rein-deer.jpeg">
+                    <p>Learn about the Department of Wildlife Conservation in Sri Lanka.</p>
+                    <a href="dept.html" class="btn">Visit Departmentpage.</a>
+                    <button onclick="changeStyleOnPageB3()">Edit Page</button>
+                    <script>
+                        function changeStyleOnPageB3() {
+                        // Set a value in localStorage
+                        localStorage.setItem('changeStyle', 'true');
+                    
+                        // Redirect to Page B
+                        window.location.href = 'dept.html';
+                    }
+                    </script> 
+                </section>
+            </section>
+            <section class="card">
+                <section class="card-content">
+                    <h2>Wild Elephant</h2>
+                    <img src="ele-habitat.jpg">
+                    <p>Find out interesting facts and information about Wild Elephants in Sri Lanka</p>
+                    <a href="elephant.html" class="btn">Visit Elephant page.</a>
+                    <button onclick="changeStyleOnPageB4()">Edit Page</button>
+                    <script>
+                        function changeStyleOnPageB4() {
+                        // Set a value in localStorage
+                        localStorage.setItem('changeStyle', 'true');
+                    
+                        // Redirect to Page B
+                        window.location.href = 'elephant.html';
+                    }
+                    </script> 
+                    
+                </section>
+            </section>
+            <section class="card">
+                <section class="card-content">
+                    <h2>Indigenous animals</h2>
+                    <img src="hump-lizard.jpg">
+                    <p>More about animals endemic to Sri Lanka here. </p>
+                    <a href="animals.html" class="btn">Visit Animals page.</a>
+                    <button onclick="changeStyleOnPageB5()">Edit Page</button>
+                    <script>
+                        function changeStyleOnPageB5() {
+                        // Set a value in localStorage
+                        localStorage.setItem('changeStyle', 'true');
+                    
+                        // Redirect to Page B
+                        window.location.href = 'animals.html';
+                    }
+                    </script> 
+                </section>
+            </section>
+            <section class="card">
+                <section class="card-content">
+                    <h2>Yala</h2>
+                    <img src="eagle.webp">
+                    <p>Read about Yala National Park here.</p>
+                    <a href="yala.html" class="btn">Visit Yala page,</a>
+                    <button onclick="changeStyleOnPageB6()">Edit Page</button>
+                    <script>
+                        function changeStyleOnPageB6() {
+                        // Set a value in localStorage
+                        localStorage.setItem('changeStyle', 'true');
+                    
+                        // Redirect to Page B
+                        window.location.href = 'yala.html';
+                    }
+                    </script> 
+                </section>
+            </section>
+            <section class="card">
+                <section class="card-content">
+                    <h2>Wilpattu</h2>
+                    <img src="ele-signi.webp">
+                    <p>Read about Wilpattu NAtional Reserve here.</p>
+                    <a href="wilpattu.html" class="btn">Visit Wilpattu page.</a>
+                    <button onclick="changeStyleOnPageB7()">Edit Page</button>
+                    <script>
+                        function changeStyleOnPageB7() {
+                        // Set a value in localStorage
+                        localStorage.setItem('changeStyle', 'true');
+                    
+                        // Redirect to Page B
+                        window.location.href = 'wilpattu.html';
+                    }
+                    </script> 
+                </section>
+            </section>
+
+            <!-- newsletter part  -->
+            <section class="card5" id="admin-content" style="display:none;">
+                <section class="card-content">
+                    <h4>Newsletter Subcription</h4>
+                    <ul id="emailList"></ul>
+                </section>
+            </section>
+            <!-- newsletter part  -->
+        </section>
+
+    </section>
+
+    <!-- ending of the user part  -->
+
+
+
+    <footer>
+        <section class="newsletter">
+            <h4>Subscribe to our Newsletter</h4>
+            <section class="newsletter-signup">
+                <form onsubmit="storeNewsLetter(); return false;">
+                    <i class="ri-mail-line"></i>
+                    <input type="email" id="emailInput" placeholder="Enter your email id" required>
+                    <button type="submit" id="submitNewsletteer"><i class="ri-arrow-right-line"></i></button>
+                </form>
+            </section>
+            <p>&copy; 2024 Sri Lankan Wildlife. All rights reserved.</p>
+        </section>
+    </footer>
+
+    <script src="dashboard.js"></script>
+
+    <script src="newsletter.js"></script>
+</body>
+
+</html>

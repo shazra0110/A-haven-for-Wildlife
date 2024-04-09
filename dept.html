@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Wildlife Conservation</title>
+    <link rel="stylesheet" href="css\dept.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Mulish:wght@200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+        integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <section>
+        <header class="header">
+            <nav class="logo">
+                <a href="index.html"><img src="logo.png"></a>
+            </nav>
+            <nav class="navigation">
+                <input type="checkbox" class="toggle-menu">
+                <nav class="hamburger"></nav>
+                <ul class="menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./intro.html">Introduction</a></li>
+                    <li><a href="./dept.html">Department of Wildlife Conservation</a></li>
+                    <li><a href="./leopard.html">Leopard</a></li>
+                    <li><a href="./animals.html">Indigenous Animals</a></li>
+                    <li><a href="./elephant.html">Wild Elephant</a></li>
+                    <li><a href="./signin.html">Sign In</a></li>
+
+                </ul>
+
+            </nav>
+
+        </header>
+       <!-- pop up button  -->
+       <button onclick="showLoginDialog()" style="display: none;" id="editButton" class="popup">Edit-Content</button>
+       <!-- end of pop up  -->
+            <script>
+                // Check if the value is set in localStorage
+                const changeStyle = localStorage.getItem('changeStyle');
+        
+                if (changeStyle === 'true') {
+                    // Change the style of the element
+                    document.getElementById('editButton').style.display = 'block';
+        
+                    // Clear the value from localStorage so it doesn't trigger again
+                    localStorage.removeItem('changeStyle');
+                }
+            </script>
+        
+            <!-- Pop up dialog -->
+        
+            <div class="form-container">
+                <dialog id="login-dialog" style="max-height: 400px; overflow-y: auto;">
+                    <h2>Srilanka : A Haven For WildLife</h2>
+                    <p>you can edit the page content now....<br></p>
+                    <button type="button" class="close" id="btnClose"><i class="ri-close-fill"></i></button>
+                    <textarea id="editedContent" rows="4" cols="50"></textarea>
+                    <button type="button" id="btnSave">Save Changes</button>
+                </dialog>
+            </div>
+
+
+
+        <div id="editableContent">
+            <section x-data="texts">
+                <section class="text-box">
+                    <h1 x-text="h1main"></h1>
+                    <p x-text="pmain">
+                    </p>
+                    <br> <br> <br> Click this link to visit the
+                    <a href="https://www.dwc.gov.lk/">Department of Wildlife Conservation</a> of Sri Lanka.
+
+                </section>
+
+            </section>
+            <section>
+                <section class="map" style="text-align: center;">
+                    <h1>LOCATION</h1>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.945747289865!2d79.91723077499626!3d6.89709269310211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae250aa85489b1f%3A0xd8773339b6b43dbb!2sDepartment%20of%20Wildlife%20Conservation!5e0!3m2!1sen!2slk!4v1705471106472!5m2!1sen!2slk"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+
+
+                <section class="grid-wrapper">
+                    <section class="grip-head">
+                        <h1>PROTECTED AREAS Gallery</h1>
+                    </section>
+                    <section>
+                        <img src="area1.jpg" alt="1">
+                    </section>
+                    <section>
+                        <img src="area2.webp" alt="2">
+                    </section>
+                    <section>
+                        <img src="area3.jpg" alt="3">
+                    </section>
+                    <section>
+                        <img src="area4.jpg" alt="4">
+                    </section>
+                    <section>
+                        <img src="area5.JPG" alt="5">
+                    </section>
+                    <section>
+                        <img src="koala2.jpg" alt="6">
+                    </section>
+                    <section>
+                        <img src="area5.JPG" alt="7">
+                    </section>
+                    <section>
+                        <img src="peacock.jpeg" alt="8">
+                    </section>
+                    <section>
+                        <img src="chimp.webp" alt="9">
+                    </section>
+
+                    <section>
+                        <img src="owl.jpg" alt="11">
+                    </section>
+
+                    <section>
+                        <img src="kingfisher.webp" alt="12">
+                    </section>
+                    <section>
+                        <img src="area6.jpg" alt="12">
+                    </section>
+                    <section>
+                        <img src="lion-and-lioness.jpeg" alt="13">
+                    </section>
+                    <section>
+                        <img src="area8.png" alt="14">
+                    </section>
+                    <section>
+                        <img src="area7.jpg" alt="14">
+                    </section>
+                </section>
+
+                <footer>
+                    <section class="newsletter">
+                        <h4>Subscribe to our Newsletter</h4>
+                        <section class="newsletter-signup">
+                            <form onsubmit="storeNewsLetter(); return false;">
+                                <input type="email" name="email" id="emailInput" placeholder="Enter your email address">
+                                <button type="submit">Subscribe</button>
+                            </form>
+                            <p id="message"></p>
+                        </section>
+                    </section>
+                    <section class="container">
+                        <section class="row">
+                            <section class="footer-col">
+                                <h4>Contact</h4> <br>
+                                <ul>
+                                    <li>+94-777112245</li> <br>
+                                    <li>wildlifeinsrilanka@email.com</li>
+                                </ul>
+                            </section>
+                            <section class="footer-col">
+                                <h4>Quick Links</h4> <br>
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="intro.html">Introduction</a></li>
+                                    <li><a href="/pages/dept.html">Department of Wildlife Conservation</a></li>
+                                    <li><a href="/pages/leopard.html">Lankan Leopard</a></li>
+                                    <li><a href="/pages/animals.html">Indigenous Animals</a></li>
+                                    <li><a href="/pages/elephant.html">Wild Elepant</a></li>
+                                </ul>
+                            </section>
+                            <section class="footer-col">
+                                <h4>Social</h4> <br>
+                                <section class="social-link">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </section>
+
+                            </section>
+
+
+                        </section>
+                        <br><br><br>
+                        <p>&copy; 2024 Sri Lankan Wildlife. All rights reserved.</p>
+                    </section>
+
+            </section>
+
+            <!-- end edit      -->
+            <!-- Content source: Wikipedia and ChatGpt -->
+            </footer>
+        </section>
+    </div>
+
+
+
+
+    <script src="dept.js"></script>
+    <script src="./newsletter.js"></script>
+
+
+</body>
+
+</html>
